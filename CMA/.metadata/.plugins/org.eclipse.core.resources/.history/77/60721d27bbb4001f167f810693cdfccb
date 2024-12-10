@@ -1,0 +1,4 @@
+{
+	"envToTest":"QAS"
+	"URLToTest":"http://10.12.3.44:5080/CM/#/login"
+}

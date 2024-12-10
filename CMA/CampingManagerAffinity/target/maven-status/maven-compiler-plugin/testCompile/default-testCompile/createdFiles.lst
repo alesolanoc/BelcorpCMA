@@ -1,0 +1,4 @@
+testScenarios\HomeTest.class
+Objects\BasePage.class
+Objects\HomePage.class
+testScenarios\BaseTest.class

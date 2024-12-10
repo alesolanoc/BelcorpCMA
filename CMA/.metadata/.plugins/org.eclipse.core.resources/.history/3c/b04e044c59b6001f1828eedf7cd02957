@@ -1,0 +1,21 @@
+package testScenarios;
+
+import org.testng.annotations.Test;
+
+import Objects.CMPage;
+import Objects.HomePage;
+
+public class CMPageTest extends HomeTest{
+	String CampaignLabel = "CAMPAIGN";
+
+	@Test
+	public void verificarCampaignLabelSeMuestraEnCMPage() {
+		CMPage cmPage = new CMPage(driver);
+		cmPage.goToAutomationExercise()
+			.clickVamosButton()
+			.clickLoginButton()
+			.fillUsernameField()
+			.fillPasswordField()
+			.verificarCampaignManagerLabel();
+	}
+}

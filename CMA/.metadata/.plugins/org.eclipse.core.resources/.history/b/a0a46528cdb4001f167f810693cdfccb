@@ -1,0 +1,15 @@
+package testScenarios;
+
+import java.io.IOException;
+
+import org.testng.annotations.Test;
+
+import Objects.HomePage;
+
+public class HomeTest extends BaseTest{
+	@Test
+	public void goToHomePage() throws IOException {
+		HomePage homePage=new HomePage(driver);
+		homePage.goToAutomationExercise();
+	}
+}

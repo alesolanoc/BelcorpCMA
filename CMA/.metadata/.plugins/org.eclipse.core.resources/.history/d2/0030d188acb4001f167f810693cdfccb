@@ -1,0 +1,23 @@
+package Objects;
+
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class HomePage extends BasePage {
+	   public HomePage (WebDriver driver) {
+	        super(driver);
+	    }
+	    Properties prop = new Properties();
+	    
+	    String baseURL = "https://automationexercise.com";
+
+	    By categorizeLabel = By.xpath("//h2[normalize-space()='Category']");
+	    
+	    public HomePage goToAutomationExercise (){
+	        driver.get(baseURL);
+	        return this;
+	    }
+
+}

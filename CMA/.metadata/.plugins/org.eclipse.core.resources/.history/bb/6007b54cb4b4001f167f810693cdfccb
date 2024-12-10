@@ -1,0 +1,29 @@
+package Objects;
+
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class HomePage extends BasePage {
+  
+	    public HomePage(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+
+		String baseURL = "https://automationexercise.com";
+
+	    By categorizeLabel = By.xpath("//h2[normalize-space()='Category']");
+	    
+	    public HomePage goToAutomationExercise () throws IOException{
+		  /*  Properties prop = new Properties();
+		    prop.load(HomePage.class.getClassLoader().getResourceAsStream("Project.properties"));
+		    baseURL = prop.getProperty("urlValue");
+		    System.out.println(baseURL);*/
+	        driver.get(baseURL);
+	        return this;
+	    }
+
+}

@@ -1,0 +1,58 @@
+package Objects;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class HomePage<JSONParser> extends BasePage {
+  
+	    public HomePage(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+
+		String baseURL = "";
+
+	    By categorizeLabel = By.xpath("//h2[normalize-space()='Category']");
+	    
+	    public static String getJSONFromFile(String fileName) {
+	    	String jsonText = "";
+	    	try {
+	    		BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
+	    		String line;
+	    		while ((line = bufferedReader.readLine()) != null) {
+	    			jsonText += line + "\n";
+	    		}
+	    		bufferedReader.close();
+	    	} catch (Exception e) {
+	    		e.printStackTrace();
+	    	}
+	    	return jsonText;
+	    }
+	    public HomePage goToAutomationExercise () throws IOException{
+/*		    Properties prop = new Properties();
+		    prop.load(HomePage.class.getClassLoader().getResourceAsStream("Project.properties"));
+		    System.out.println("alejoooooooooo111111111111111");
+
+		    baseURL = prop.getProperty("urlValue");
+		    System.out.println("alejoooooooooo");
+		    System.out.println(baseURL);*/
+	    	String strnJson = getJSONFromFile("C:/Users/aleja/Belcorp/CMA/CampingManagerAffinity/src/test/java/Resources/GlobalData.json");
+	    	System.out.println(strnJson);
+	   /* 	try {
+	    		JSONParser parser = new JSONParser();
+	    		Object object = parser.parse(strJson);
+	    		String env = (String) mainJsonObject.get("envToTest");
+	    		System.out.println("alejoooo");
+	    		System.out.println(env);
+	    		}*/
+	        driver.get(baseURL);
+	        return this;
+	    }
+
+}

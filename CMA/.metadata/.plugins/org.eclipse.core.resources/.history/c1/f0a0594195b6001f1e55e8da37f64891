@@ -1,0 +1,6 @@
+{
+	"envToTest":"STG",
+	"URLToTest":"http://10.12.3.63:5080/CM/#/login",
+	"usuario":"extasolano",
+	"password":"Diego2!fabian2!"
+}
